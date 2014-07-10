@@ -1,4 +1,4 @@
-# Intro to Object Oriented PHP
+# PHP 2
 
 ### Overview
 
