@@ -1,33 +1,56 @@
 $welcomeBG: #ebd162;
+$welcomeLink: #b5642e;
 $usersBG: #84b2b1;
+$usersLink: #fbe467;
 $createBG: #a2d0d5;
+$createLink: #8f5503;
 $updateBG: #f4a439;
+$updateLink: #008492;
 $deleteBG: #ef4d3c;
+$deleteLink: #fad991;
+$mainSerif: 'Josefin Slab', serif;
+$mainSansSerif: 'Josefin Sans', sans-serif;
 
 body {
-	font-family: 'Josefin Slab', serif;
+	font-family: $mainSerif;
 	text-align: center;
 
 	&.welcome {
 		background: $welcomeBG;
 		color: #fff;
+		a { color: $welcomeLink; }
 	}
 	&.users {
 		background: $usersBG;
 		color: #fff;
+		a { color: $usersLink; }
 	}
 	&.create {
 		background: $createBG;
 		color: #fff;
+		a { color: $createLink; }
 	}
 	&.update {
 		background: $updateBG;
 		color: #fff;
+		a { color: $updateLink; }
 	}
 	&.delete {
 		background: $deleteBG;
 		color: #fff;
+		a { color: $deleteLink; }
 	}
+}
+
+h1 { font-weight: lighter; }
+
+a {
+	font-size: 1.4em;
+	font-family: $mainSansSerif;
+}
+
+span.username {
+	font-weight: 700;
 }
 
 ul.options {

@@ -7,5 +7,6 @@
 	    // echo "<PRE>";
 	    var_dump($users);
     ?>
+    <a href="index.html">Go back</a>
 </div>
 @stop

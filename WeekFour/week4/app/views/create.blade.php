@@ -1,6 +1,9 @@
 @extends('layout.default')
 @section('content')
-    <h1 class="create">You created a user, <span class="username">Rose</span>.</h1>
+	<div class="content-div create-div">
+	    <h1 class="create">You created a user, <span class="username">Rose</span>.</h1>
+	    <a href="index.html">Go back</a>
+	</div>
 
     <!-- <form action="users/post_create" method="POST">
 		<input name="username" type="text" placeholder="username">

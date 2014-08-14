@@ -1,21 +1,41 @@
 body {
-  font-family: 'Josefin Slab', serif;
+  font-family: "Josefin Slab", serif;
   text-align: center; }
   body.welcome {
     background: #ebd162;
     color: #fff; }
+    body.welcome a {
+      color: #b5642e; }
   body.users {
     background: #84b2b1;
     color: #fff; }
+    body.users a {
+      color: #fbe467; }
   body.create {
     background: #a2d0d5;
     color: #fff; }
+    body.create a {
+      color: #8f5503; }
   body.update {
     background: #f4a439;
     color: #fff; }
+    body.update a {
+      color: #008492; }
   body.delete {
     background: #ef4d3c;
     color: #fff; }
+    body.delete a {
+      color: #fad991; }
+
+h1 {
+  font-weight: lighter; }
+
+a {
+  font-size: 1.4em;
+  font-family: "Josefin Sans", sans-serif; }
+
+span.username {
+  font-weight: 700; }
 
 ul.options {
   padding: 0;
