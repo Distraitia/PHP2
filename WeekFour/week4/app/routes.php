@@ -11,16 +11,24 @@
 |
 */
 
+// MOVE ALL TO USERSCONTROLLER
+
+// Route::resource('users','UsersController');
+
+Route::get('login', 'UsersController@login');
+
 Route::get('/', 'HomeController@showWelcome');
 
 Route::get('about', 'AboutController@showAbout');
 
 Route::get('about/contact', 'AboutController@showContact');
 
-Route::get('users', 'AboutController@showUsers');
+Route::get('users/create/{username}', 'UsersController@createUser');
 
-Route::get('users/create', 'AboutController@createUser');
+Route::get('users/update/{userId}', 'UsersController@updateUser');
 
-Route::get('users/update', 'AboutController@updateUser');
+Route::get('users/delete/{userId}', 'UsersController@deleteUser');
 
-Route::get('users/delete', 'AboutController@deleteUser');
+Route::get('users', 'UsersController@index');
+
+Route::get('users/{username}', 'UsersController@showUser');

@@ -30,9 +30,6 @@ body {
 h1 {
   font-weight: lighter; }
 
-h1.users {
-  font-weight: 700; }
-
 a {
   font-size: 1.4em;
   font-family: "Josefin Sans", sans-serif; }
@@ -40,23 +37,9 @@ a {
 span.username {
   font-weight: 700; }
 
-ul {
+ul.options {
   padding: 0;
-  margin: 0 auto;
-  list-style-type: none; }
-  ul li {
+  margin: 0 auto; }
+  ul.options li {
     display: block;
-    text-align: center;
-    list-style-type: none; }
-
-ul.users {
-  margin-bottom: 20px; }
-
-a.go-back,
-a[href="http://localhost:8000"] {
-  margin-top: 20px;
-  text-decoration: none;
-  transition: color .2s ease-out; }
-  a.go-back:hover,
-  a[href="http://localhost:8000"]:hover {
-    color: #fff; }
+    text-align: center; }
