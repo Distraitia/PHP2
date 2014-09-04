@@ -19,16 +19,18 @@ Route::get('login', 'UsersController@login');
 
 Route::get('/', 'HomeController@showWelcome');
 
-Route::get('about', 'AboutController@showAbout');
+// Route::get('users/create/{username}', 'UsersController@createUser');
+Route::post('users/create', 'UsersController@createUser');
 
-Route::get('about/contact', 'AboutController@showContact');
-
-Route::get('users/create/{username}', 'UsersController@createUser');
-
-Route::get('users/update/{userId}', 'UsersController@updateUser');
+// Route::get('users/update/{userId}', 'UsersController@updateUser');
+Route::post('users/update', 'UsersController@updateUser');
 
 Route::get('users/delete/{userId}', 'UsersController@deleteUser');
 
 Route::get('users', 'UsersController@index');
 
-Route::get('users/{username}', 'UsersController@showUser');
+Route::get('users/profile/{username}', 'UsersController@showUser');
+
+Route::get('users/register','UsersController@registerUser');
+
+Route::get('comments','UsersController@viewComments');

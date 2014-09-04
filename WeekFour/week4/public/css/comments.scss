@@ -1,0 +1,124 @@
+body.comments {
+	background: black;
+
+	h1,
+	h2 {
+		color: white;
+	}
+}
+
+.wrapper-box,
+.form-wrapper {
+	padding: 3px;
+	border: 1px solid white;
+	width: 50%;
+	margin-left: 25%;
+	float: left;
+	background: black;
+	margin-bottom: 20px;
+}
+
+.comments-container,
+.form-wrapper form {
+	width: 100%;
+	margin-left: 0;
+	float: left;
+	border: 1px solid white;
+	padding: 10px;
+	/*margin-bottom: 20px;*/
+}
+
+.comment-block {
+	width: 100%;
+	margin-left: 0;
+	float: left;
+	padding: 0;
+	border-right: 1px solid white;
+	border-left: 1px solid white;
+	border-bottom: 1px solid white;
+	margin-top: 0;
+	text-align: left;
+
+	&:first-child {
+		border-top: 1px solid white;
+	}
+
+	.username-container {
+		width: 100%;
+		padding: 10px 15px;
+		background: #bbb;
+		border-bottom: 1px solid white;
+	}
+
+	.comment-container {
+		background: gray;
+		color: white;
+		width: 100%;
+		padding: 10px 15px;
+	}
+
+	.comment,
+	.username {
+		font-size: 17px;
+	}
+
+	.comment {
+		font-family: $mainSansSerif;
+		margin: 0 0 20px;
+	}
+
+	p.post-time {
+		font-family: $mainSansSerif;
+		font-size: 15px;
+		text-align: right;
+		color: #ddd;
+	}
+
+	p {
+		margin: 0;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.wrapper-box {
+		width: 90%;
+		margin-left: 5%;
+	}
+}
+
+.form-wrapper {
+	padding-top: 20px;
+}
+.form-wrapper textarea {
+	height: 90px;
+	clear: both;
+	width: 70%;
+	margin-left: 15%;
+	float: left;
+	margin-bottom: 10px;
+}
+.form-wrapper button {
+	display: block;
+	margin: 10px auto;
+	font-size: 16px;
+	font-family: $mainSansSerif;
+	font-weight: bold;
+	color: #000;
+	background: gray;
+	border: 2px solid white;
+	padding: 7px 10px 5px;
+}
+
+.comments {
+	h2 {
+		clear: both;
+	}
+	ul.options {
+		clear: both;
+		margin-bottom: 30px;
+
+		a {
+			color: #ddd;
+		}
+	}
+}

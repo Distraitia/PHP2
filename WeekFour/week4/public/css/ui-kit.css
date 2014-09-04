@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Josefin Slab", serif;
+  text-align: center; }
+  body.welcome {
+    background: #ebd162;
+    color: #fff; }
+    body.welcome a {
+      color: #b5642e; }
+  body.users {
+    background: #84b2b1;
+    color: #fff; }
+    body.users a {
+      color: #fbe467; }
+  body.register {
+    background: #a2d0d5;
+    color: #fff; }
+    body.register a {
+      color: #8f5503; }
+  body.update {
+    background: #f4a439;
+    color: #fff; }
+    body.update a {
+      color: #008492; }
+  body.delete {
+    background: #ef4d3c;
+    color: #fff; }
+    body.delete a {
+      color: #fad991; }
+
+h1 {
+  font-weight: lighter; }
+
+h1.users {
+  font-weight: 700; }
+
+a {
+  font-size: 1.4em;
+  font-family: "Josefin Sans", sans-serif; }
+
+span.username {
+  font-weight: 700; }
+
+.filename {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+  color: #000; }
+
+ul {
+  padding: 0;
+  margin: 0 auto;
+  list-style-type: none; }
+  ul li {
+    display: block;
+    text-align: center;
+    list-style-type: none; }
+
+ul.users {
+  margin-bottom: 20px; }
+
+.block-btn {
+  display: block;
+  text-decoration: none; }
+
+a.back-btn {
+  margin-top: 20px;
+  text-decoration: none;
+  transition: color .2s ease-out; }
+  a.back-btn:hover {
+    color: #fff; }
+
+.create-form {
+  display: block;
+  clear: both;
+  width: 20%;
+  margin-left: 40%;
+  float: left;
+  border: 1px solid black; }
+
+.label {
+  display: block; }
+
+body.comments {
+  background: black; }
+  body.comments h1,
+  body.comments h2 {
+    color: white; }
+
+.wrapper-box,
+.form-wrapper {
+  padding: 3px;
+  border: 1px solid white;
+  width: 50%;
+  margin-left: 25%;
+  float: left;
+  background: black;
+  margin-bottom: 20px; }
+
+.comments-container,
+.form-wrapper form {
+  width: 100%;
+  margin-left: 0;
+  float: left;
+  border: 1px solid white;
+  padding: 10px;
+  /*margin-bottom: 20px;*/ }
+
+.comment-block {
+  width: 100%;
+  margin-left: 0;
+  float: left;
+  padding: 0;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  margin-top: 0;
+  text-align: left; }
+  .comment-block:first-child {
+    border-top: 1px solid white; }
+  .comment-block .username-container {
+    width: 100%;
+    padding: 10px 15px;
+    background: #bbb;
+    border-bottom: 1px solid white; }
+  .comment-block .comment-container {
+    background: gray;
+    color: white;
+    width: 100%;
+    padding: 10px 15px; }
+  .comment-block .comment,
+  .comment-block .username {
+    font-size: 17px; }
+  .comment-block .comment {
+    font-family: "Josefin Sans", sans-serif;
+    margin: 0 0 20px; }
+  .comment-block p.post-time {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 15px;
+    text-align: right;
+    color: #ddd; }
+  .comment-block p {
+    margin: 0; }
+
+@media screen and (max-width: 768px) {
+  .wrapper-box {
+    width: 90%;
+    margin-left: 5%; } }
+.form-wrapper {
+  padding-top: 20px; }
+
+.form-wrapper textarea {
+  height: 90px;
+  clear: both;
+  width: 70%;
+  margin-left: 15%;
+  float: left;
+  margin-bottom: 10px; }
+
+.form-wrapper button {
+  display: block;
+  margin: 10px auto;
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+  color: #000;
+  background: gray;
+  border: 2px solid white;
+  padding: 7px 10px 5px; }
+
+.comments h2 {
+  clear: both; }
+.comments ul.options {
+  clear: both;
+  margin-bottom: 30px; }
+  .comments ul.options a {
+    color: #ddd; }

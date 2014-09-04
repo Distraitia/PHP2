@@ -1,22 +1,36 @@
 @extends('layout.default')
 @section('content')
-<div class="welcome">
+<!-- <div class="welcome"> -->
     <h1 class="welcome">Welcome.</h1>
+    <h2 class="filename">hello.blade.php</h2>
 
-    <!-- a form that links to post_login.php, and the information is posted, so the user can't see the information in the url -->
-	<form action="" method="POST">
-		<!-- $_POST['username'] and $_POST['password'] information is posted -->
-		<input name="username" type="text" placeholder="username">
-		<input name="password" type="text" placeholder="password">
-		<button type="submit">Login</button>
-	</form>
+    <!-- {{ Form::open(["url" => "/users/create"]) }} -->
+    {{ Form::open(array("url"=>url("/users/create"), "class"=>"create-form")) }}
+
+        {{ Form::label('username','Username: ',array("class"=>"label")) }}
+        <!-- {{ Form::text('username') }} -->
+        {{ Form::input('text','username','Bubba Hotep',['class'=>'label']) }}
+        {{ $errors->first('username') }}
+        {{ Form::label('password','Password: ') }}
+        <!-- {{ Form::password('password') }} -->
+        <!-- {{ Form::text('password','test',['class'=>"herro","type"=>"password"]) }} -->
+        {{ Form::password('password',array('class'=>'label','placeholder'=>'Somebody stop me!')) }}
+        {{ $errors->first('password') }}
+
+        {{ Form::submit('Create User') }}
+    {{ Form::close() }}
 
     <h2>What would you like to do?</h2>
     <ul class="options">
-    	<li><a href="/users">Users</a></li>
-    	<li><a href="http://localhost:8000/users/create/Hodor">Create User Hodor</a></li>
-    	<li><a href="/users/update">Update User</a></li>
-    	<li><a href="/users/delete">Delete User</a></li> 
+    	<li>   
+            {{ link_to("/users", "View Users",array("class"=>"users-btn block-btn")) }}
+        </li>
+    	<li>
+            {{ link_to("/users/register", "Register New User",array("class"=>"register-btn block-btn")) }}
+        </li>
+        <li>
+            {{ link_to("comments", "View Comments",array("class"=>"block-btn view-comments-btn")) }}
+        </li>
     </ul>
-</div>
+<!-- </div> -->
 @stop

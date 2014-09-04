@@ -2,14 +2,18 @@ $welcomeBG: #ebd162;
 $welcomeLink: #b5642e;
 $usersBG: #84b2b1;
 $usersLink: #fbe467;
-$createBG: #a2d0d5;
-$createLink: #8f5503;
+$registerBG: #a2d0d5;
+$registerLink: #8f5503;
 $updateBG: #f4a439;
 $updateLink: #008492;
 $deleteBG: #ef4d3c;
 $deleteLink: #fad991;
 $mainSerif: 'Josefin Slab', serif;
 $mainSansSerif: 'Josefin Sans', sans-serif;
+
+* {
+	box-sizing: border-box;
+}
 
 body {
 	font-family: $mainSerif;
@@ -25,10 +29,10 @@ body {
 		color: #fff;
 		a { color: $usersLink; }
 	}
-	&.create {
-		background: $createBG;
+	&.register {
+		background: $registerBG;
 		color: #fff;
-		a { color: $createLink; }
+		a { color: $registerLink; }
 	}
 	&.update {
 		background: $updateBG;
@@ -56,6 +60,12 @@ span.username {
 	font-weight: 700;
 }
 
+.filename {
+	font-family: $mainSansSerif;
+	font-weight: bold;
+	color: #000;
+}
+
 ul {
 	padding: 0;
 	margin: 0 auto;
@@ -72,8 +82,12 @@ ul.users {
 	margin-bottom: 20px;
 }
 
-a.go-back,
-a[href="http://localhost:8000"] {
+.block-btn {
+	display: block;
+	text-decoration: none;
+}
+
+a.back-btn {
 	margin-top: 20px;
 	text-decoration: none;
 	transition: color .2s ease-out;
@@ -81,4 +95,16 @@ a[href="http://localhost:8000"] {
 	&:hover {
 		color: #fff;
 	}
+}
+
+.create-form {
+	display: block;
+	clear: both;
+	width: 20%;
+	margin-left: 40%;
+	float: left;
+	border: 1px solid black;
+}
+.label {
+	display: block;
 }

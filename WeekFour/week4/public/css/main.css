@@ -11,10 +11,10 @@ body {
     color: #fff; }
     body.users a {
       color: #fbe467; }
-  body.create {
+  body.register {
     background: #a2d0d5;
     color: #fff; }
-    body.create a {
+    body.register a {
       color: #8f5503; }
   body.update {
     background: #f4a439;
@@ -40,6 +40,11 @@ a {
 span.username {
   font-weight: 700; }
 
+.filename {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+  color: #000; }
+
 ul {
   padding: 0;
   margin: 0 auto;
@@ -52,11 +57,13 @@ ul {
 ul.users {
   margin-bottom: 20px; }
 
-a.go-back,
-a[href="http://localhost:8000"] {
+.block-btn {
+  display: block;
+  text-decoration: none; }
+
+a.back-btn {
   margin-top: 20px;
   text-decoration: none;
   transition: color .2s ease-out; }
-  a.go-back:hover,
-  a[href="http://localhost:8000"]:hover {
+  a.back-btn:hover {
     color: #fff; }

@@ -13,25 +13,49 @@ class UsersController extends \BaseController {
 		return View::make('login');
 	}
 
-	public function createUser($username) {
+	// public function createUser($username) {
+	public function createUser() {
+		$validation = Validator::make(Input::all(), ['username' => 'required', 'password' => 'required']);
+
+		if ($validation->fails()) {
+			// return "Validation failed.";
+			return Redirect::back()->withInput()->withErrors($validation->messages());
+		}
+
 		$user = new User;
 	
-		$user->username = $username; // new user's name
-		$user->password = Hash::make("123"); // create a hashed password for '123'
+		$user->username = Input::get('username'); // new user's name
+		$user->password = Hash::make(Input::get('password')); // create a hashed password for '123'
 		$user->save(); // saves the user to the database
 
-		echo "<a href='http://localhost:8000'>Go back</a>";
-		return User::all();
+		// return User::all();
+		return Redirect::to('/users');
 
-		echo "<a href='http://localhost:8000'>Go back</a>";
+		// return "You're trying to create something.";
+		// return Input::all();
 	}
 
-	public function updateUser($userId) {
-		$user = User::find($userId);
-		$user->username = "Leroy Jenkins";
+	// public function updateUser($userId) {
+	public function updateUser() {
+		// $user = User::find($userId);
+		// $user->username = "Leroy Jenkins";
+		// $user->save();
+
+		// return User::all();
+
+		// return "You should be updated.";
+		$user = User::find(Input::get('userId'));
+		$user->username = Input::get('username');
+
+		if (Input::get('password')) {
+			$user->password = Hash::make(Input::get('password'));
+		}
 		$user->save();
 
-		return User::all();
+		// return User::all();
+		return Redirect::to('/users');
+
+		// return Input::get();
 	}
 
 	public function deleteUser($userId) {
@@ -41,36 +65,20 @@ class UsersController extends \BaseController {
 		$user = User::find($userId);
 		$user->delete();
 
-		echo "<a href='http://localhost:8000'>Go back</a>";
-
 		return User::all();
 	}
 
 	public function showUser($username) {
 		$user = User::whereUsername($username)->first();
-		echo "<a href='http://localhost:8000'>Go back</a>";
+		// echo "<a href='http://localhost:8000'>Go back</a>";
 		return View::make('users/member')->with('user',$user);
 	}
 
-	public function create($username) {
-		// $user = new User;
-	
-		// $user->username = $username; // new user's name
-		// $user->password = Hash::make("123"); // create a hashed password for '123'
-		// $user->save(); // saves the user to the database
-
-		// return User::all();
+	public function registerUser() {
+		return View::make('users/register');
 	}
 
-	public function update() {
-		// $user = User::find(1);
-		// $user->username = "Jeremy Angelica";
-		// $user->save();
-
-		// return User::all();
-	}
-
-	public function show() {
-		return "test";
+	public function viewComments() {
+		return View::make('comments');
 	}
 }
