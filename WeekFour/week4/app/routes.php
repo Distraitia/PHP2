@@ -14,8 +14,12 @@
 // MOVE ALL TO USERSCONTROLLER
 
 // Route::resource('users','UsersController');
+Route::resource('sessions',"SessionsController");
 
-Route::get('login', 'UsersController@login');
+Route::get('login', 'SessionsController@create');
+Route::get('logout','SessionsController@logout');
+
+Route::get('admin','HomeController@admin')->before('auth');
 
 Route::get('/', 'HomeController@showWelcome');
 
@@ -34,3 +38,7 @@ Route::get('users/profile/{username}', 'UsersController@showUser');
 Route::get('users/register','UsersController@registerUser');
 
 Route::get('comments','UsersController@viewComments');
+
+Route::post('comments/create','CommentsController@create')->before('auth');
+Route::get("comments/edit/{commentId}","CommentsController@edit")->before('auth');
+Route::post("comments/update","CommentsController@update")->before('auth');

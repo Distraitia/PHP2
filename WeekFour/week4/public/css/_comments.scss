@@ -67,11 +67,13 @@ body.comments {
 		margin: 0 0 20px;
 	}
 
-	p.post-time {
+	p.post-time,
+	a {
 		font-family: $mainSansSerif;
 		font-size: 15px;
 		text-align: right;
 		color: #ddd;
+		display: block;
 	}
 
 	p {

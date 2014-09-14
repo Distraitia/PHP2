@@ -1,0 +1,95 @@
+div.home-form-container {
+	width: 240px;
+	padding: 16px;
+	margin: 60px auto;
+	background: $welcomeBG;
+	position: relative;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-bottom: 1px solid #000;
+	border-right: 1px solid #000;
+	border-left: 1px solid #000;
+
+	.login-form,
+	.register-form {
+		display: none;
+
+		&.is-active {
+			display: block;
+		}
+	}
+
+	h2 {
+		background: $welcomeDarkBG;
+		padding: 10px;
+		height: 40px;
+		position: absolute;
+		top: -40px;
+		margin: 0;
+		font-size: 20px;
+		width: calc(50% - 3px);
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
+		border-top: 1px solid #000;
+		border-right: 1px solid #000;
+		border-left: 1px solid #000;
+
+		&.is-active {
+			background: $welcomeBG;
+		}
+
+		&.login-label {
+			left: -1px;
+		}
+		&.register-label {
+			right: -1px;
+		}
+	}
+}
+
+div.login-form-container {
+	width: 230px;
+	height: auto;
+	margin: 40px auto;
+	background: skyblue;
+	padding: 15px;
+
+	h2 {
+		margin: 0 0 12px;
+	}
+
+	.login-btn {
+		width: 80px;
+		margin-top: 0px;
+		float: right;
+		margin-bottom: 0;
+	}
+}
+
+.login-form {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.comment-form-container {
+	width: 100%;
+}
+
+label,
+input {
+	display: block;
+}
+
+label {
+	margin-bottom: 3px;
+	text-align: left;
+}
+
+input {
+	margin: 0 auto 12px;
+	border: none;
+	box-shadow: none;
+	height: 32px;
+	width: 100%;
+	padding: 7px;
+}

@@ -8,7 +8,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="/js/main.js"></script>
 </head>
-<body>
+<body class="gradient">
     <!-- <div class="content"> -->
         @yield('content')
     <!-- </div> -->

@@ -17,9 +17,25 @@ class HomeController extends BaseController {
 
 	public function showWelcome()
 	{
-        $name = "Allison";
+        return View::make('hello');
+	}
 
-        return View::make('hello')->with('name', $name);
+	public function admin() {
+		$userInfo = Auth::user();
+		// SELECT * FROM comments INNER JOIN users ON comment.user_id = users.id
+		$comments = DB::table('comments')->join('users','users.id','=','comments.user_id')->get();
+
+		// echo "<pre>";
+		// print_r($comments);
+
+		// echo "<pre>";
+		// foreach ($comments as $comment) {
+		// 	var_dump($comment);
+		// }
+
+		// die();
+
+		return View::make('admin.admin')->with('userInfo', $userInfo)->with('comments',$comments);
 	}
 
 }

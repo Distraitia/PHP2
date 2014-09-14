@@ -1,1 +1,1 @@
-$(document).ready(function(){var e=$("h1").attr("class");$("body").addClass(e)});
+$(document).ready(function(){function t(){$(".gradient").css("background-image","linear-gradient(gray,lightgray)")}var e=$("h1").attr("class");$("body").addClass(e);t();$(window).resize(t)});

@@ -1,4 +1,5 @@
 $welcomeBG: #ebd162;
+$welcomeDarkBG: #94843f;
 $welcomeLink: #b5642e;
 $usersBG: #84b2b1;
 $usersLink: #fbe467;
@@ -13,6 +14,15 @@ $mainSansSerif: 'Josefin Sans', sans-serif;
 
 * {
 	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	float: left;
 }
 
 body {
@@ -107,4 +117,14 @@ a.back-btn {
 }
 .label {
 	display: block;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
 }

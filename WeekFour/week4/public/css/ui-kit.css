@@ -1,6 +1,14 @@
 * {
   box-sizing: border-box; }
 
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  float: left; }
+
 body {
   font-family: "Josefin Slab", serif;
   text-align: center; }
@@ -82,6 +90,89 @@ a.back-btn {
 .label {
   display: block; }
 
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+div.home-form-container {
+  width: 240px;
+  padding: 16px;
+  margin: 60px auto;
+  background: #ebd162;
+  position: relative;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  border-left: 1px solid #000; }
+  div.home-form-container .login-form,
+  div.home-form-container .register-form {
+    display: none; }
+    div.home-form-container .login-form.is-active,
+    div.home-form-container .register-form.is-active {
+      display: block; }
+  div.home-form-container h2 {
+    background: #94843f;
+    padding: 10px;
+    height: 40px;
+    position: absolute;
+    top: -40px;
+    margin: 0;
+    font-size: 20px;
+    width: calc(50% - 3px);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    border-left: 1px solid #000; }
+    div.home-form-container h2.is-active {
+      background: #ebd162; }
+    div.home-form-container h2.login-label {
+      left: -1px; }
+    div.home-form-container h2.register-label {
+      right: -1px; }
+
+div.login-form-container {
+  width: 230px;
+  height: auto;
+  margin: 40px auto;
+  background: skyblue;
+  padding: 15px; }
+  div.login-form-container h2 {
+    margin: 0 0 12px; }
+  div.login-form-container .login-btn {
+    width: 80px;
+    margin-top: 0px;
+    float: right;
+    margin-bottom: 0; }
+
+.login-form {
+  width: 100%;
+  margin: 0 auto; }
+
+.comment-form-container {
+  width: 100%; }
+
+label,
+input {
+  display: block; }
+
+label {
+  margin-bottom: 3px;
+  text-align: left; }
+
+input {
+  margin: 0 auto 12px;
+  border: none;
+  box-shadow: none;
+  height: 32px;
+  width: 100%;
+  padding: 7px; }
+
 body.comments {
   background: black; }
   body.comments h1,
@@ -135,11 +226,13 @@ body.comments {
   .comment-block .comment {
     font-family: "Josefin Sans", sans-serif;
     margin: 0 0 20px; }
-  .comment-block p.post-time {
+  .comment-block p.post-time,
+  .comment-block a {
     font-family: "Josefin Sans", sans-serif;
     font-size: 15px;
     text-align: right;
-    color: #ddd; }
+    color: #ddd;
+    display: block; }
   .comment-block p {
     margin: 0; }
 
