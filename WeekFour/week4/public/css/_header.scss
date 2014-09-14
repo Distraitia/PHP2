@@ -1,0 +1,40 @@
+header {
+	height: 70px;
+	background: black;
+	margin: 0;
+	position: relative;
+
+	h2 {
+		margin: 15px 0 0 15px;
+		float: left;
+		color: #ccc;
+	}
+
+	.options {
+		padding: 0;
+		float: right;
+		margin-right: 15px;
+		position: absolute;
+		bottom: 10px;
+		right: 0;
+	}
+
+	ul.options li {
+		display: inline;
+		width: auto;
+		margin: 0 7px;
+
+		a {
+			width: auto;
+			display: inline;
+			text-decoration: none;
+			font-size: 20px;
+			color: $welcomeBG;
+			transition: color .2s ease-out;
+
+			&:hover {
+				color: white;
+			}
+		}
+	}
+}

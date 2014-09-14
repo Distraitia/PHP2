@@ -30,7 +30,7 @@ class SessionsController extends BaseController {
 	public function logout() {
 		Auth::logout();
 
-		return Redirect::to("login");
+		return Redirect::to("/");
 	}
 
 	public function store() {

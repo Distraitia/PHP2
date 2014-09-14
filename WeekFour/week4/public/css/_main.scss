@@ -2,10 +2,13 @@ $welcomeBG: #ebd162;
 $welcomeDarkBG: #94843f;
 $welcomeLink: #b5642e;
 $usersBG: #84b2b1;
+$usersDarkBG: #597777;
 $usersLink: #fbe467;
 $registerBG: #a2d0d5;
+$registerDarkBG: #6f8e91;
 $registerLink: #8f5503;
 $updateBG: #f4a439;
+$updateDarkBG: #b3782a;
 $updateLink: #008492;
 $deleteBG: #ef4d3c;
 $deleteLink: #fad991;
@@ -89,7 +92,7 @@ ul {
 }
 
 ul.users {
-	margin-bottom: 20px;
+	/*margin-bottom: 20px;*/
 }
 
 .block-btn {
@@ -107,6 +110,15 @@ a.back-btn {
 	}
 }
 
+a.outside-link {
+	display: block;
+	clear: both;
+	margin-bottom: 50px;
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
+
 .create-form {
 	display: block;
 	clear: both;
@@ -115,7 +127,7 @@ a.back-btn {
 	float: left;
 	border: 1px solid black;
 }
-.label {
+label {
 	display: block;
 }
 

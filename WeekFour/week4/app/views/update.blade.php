@@ -7,8 +7,6 @@
 	    <a href="index.html">Go back</a>
 	</div> -->
    
-    {{ link_to("/users/delete/$user->id", "Delete Me!") }}
-
     {{ Form::open(["url" => "/users/update"]) }}
     <div>
         {{ Form::label('username','New Username: ') }}

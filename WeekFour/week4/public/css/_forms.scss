@@ -2,7 +2,7 @@ div.home-form-container {
 	width: 240px;
 	padding: 16px;
 	margin: 60px auto;
-	background: $welcomeBG;
+	/*background: $welcomeBG;*/
 	position: relative;
 	border-bottom-left-radius: 8px;
 	border-bottom-right-radius: 8px;
@@ -10,17 +10,66 @@ div.home-form-container {
 	border-right: 1px solid #000;
 	border-left: 1px solid #000;
 
-	.login-form,
-	.register-form {
-		display: none;
-
-		&.is-active {
+	&.login-tab {
+		.login-form {
 			display: block;
+		}
+		.register-form {
+			display: none;
+		}
+
+		&,
+		.login-label {
+			background: $welcomeBG;
+		}
+
+		label {
+			color: $welcomeLink;
+		}
+
+		input[type=submit] {
+			background: $welcomeDarkBG;
+			color: white;
+
+			&:hover {
+				background: white;
+				color: $welcomeDarkBG;
+			}
+		}
+	}
+
+	&.register-tab {
+		.register-form {
+			display: block;
+		}
+		.login-form {
+			display: none;
+		}
+
+		&,
+		.register-label {
+			background: $registerBG;
+		}
+
+		label {
+			color: $registerLink;
+		}
+
+		input[type=submit] {
+			background: $registerDarkBG;
+			color: white;
+			border: 1px solid black;
+			/*border-radius: 5px;*/
+			/*font-weight: bold;*/
+
+			&:hover {
+				background: white;
+				color: $registerDarkBG;
+			}
 		}
 	}
 
 	h2 {
-		background: $welcomeDarkBG;
 		padding: 10px;
 		height: 40px;
 		position: absolute;
@@ -33,25 +82,76 @@ div.home-form-container {
 		border-top: 1px solid #000;
 		border-right: 1px solid #000;
 		border-left: 1px solid #000;
+		cursor: pointer;
 
 		&.is-active {
-			background: $welcomeBG;
+			color: black;
+
+			.login-label {
+				background: $welcomeBG;
+			}
+			.register-label {
+				background: $registerBG;
+			}
 		}
 
 		&.login-label {
 			left: -1px;
+			background: $welcomeDarkBG;
 		}
 		&.register-label {
 			right: -1px;
+			background: $registerDarkBG;	
 		}
+	}
+
+	input[type=submit] {
+		margin-top: 12px;
+		width: 120px;
+		font-family: $mainSansSerif;
+		font-size: 18px;
+		margin-bottom: 0;
+		border: 1px solid black;
+	}
+
+	label {
+		font-weight: bold;
+		font-size: 17px;
+		display: none;
 	}
 }
 
+.container {
+	width: 240px;
+	padding: 16px;
+	border-bottom-left-radius: 12px;
+	border-bottom-right-radius: 12px;
+	margin: 0 auto;
+
+	h2 {
+		margin: 0 0 12px;
+	}
+}
+
+.update-form-container {
+	background: $updateBG;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+}
+
+.update-btn {
+	width: 110px;
+	background: $updateDarkBG;
+	color: white;
+}
+
 div.login-form-container {
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+	background: $welcomeBG;
 	width: 230px;
 	height: auto;
 	margin: 40px auto;
-	background: skyblue;
 	padding: 15px;
 
 	h2 {
@@ -73,23 +173,152 @@ div.login-form-container {
 
 .comment-form-container {
 	width: 100%;
+	clear: both;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+	padding-top: 12px;
 }
 
+.comment-form {
+	width: 80%;
+	margin-left: 10%;
+
+	label,
+	p {
+		color: white;
+	}
+
+	label {
+		font-size: 18px;
+		margin: 0 0 11px;
+	}
+
+	textarea {
+		width: 100%;
+		margin: 0;
+		padding: 10px;
+		font-size: 13px;
+		border: none;
+		box-shadow: none;
+	}
+
+	p {
+		margin: 2px 0 9px;
+	}
+
+	input[type=submit] {
+		width: auto;
+		height: auto;	
+		border: 1px solid white;
+		background: #555;
+		color: white;
+		font-family: $mainSansSerif;
+		font-size: 17px;
+		padding: 9px 10px;
+		cursor: pointer;
+		/*font-weight: bold;*/
+		transition: color .2s ease-out,
+			background .2s ease-out,
+			border .2s ease-out;
+
+		&:hover {
+			background: #fff;
+			color: black;
+			border-color: gray;
+		}
+	}
+}
+
+.register-form-container {
+	background: $registerBG;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+
+	input[type=submit] {
+		width: 110px;
+		background: $registerDarkBG;
+		color: white;
+		border: 1px solid black;
+		/*border-radius: 7px;*/
+	}
+}
+
+.users-container {
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+	background: $usersBG;
+	height: auto;
+
+	li {
+		margin-bottom: 6px;
+	}
+
+	a {
+		color: $usersLink;
+		font-size: 24px;
+		text-decoration: none;
+	}
+}
+
+.update-comment-container {
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+	width: 300px;
+	background: $usersBG;
+
+	textarea {
+		width: 100%;
+		padding: 7px;
+		font-family: $mainSansSerif;
+		font-size: 16px;
+		margin-bottom: 10px;
+	}
+	
+	p {
+		margin: 7px 0 12px;
+		color: white;
+		font-weight: bold;
+		font-family: $mainSerif !important;
+	}
+
+	h4 {
+		margin: 0;
+		font-size: 22px;
+	}
+
+	input[type=submit] {
+		width: 120px;
+		background: $usersDarkBG;
+		color: white;
+		border-color: black;
+	}
+}
+
+/*.register-tab {
+	input {
+		border-radius: 0;
+	}
+}*/
 label,
 input {
 	display: block;
+	border-radius: 6px;
 }
 
 label {
 	margin-bottom: 3px;
 	text-align: left;
+	display: none;
 }
 
 input {
 	margin: 0 auto 12px;
-	border: none;
+	border: 1px solid #777;
 	box-shadow: none;
 	height: 32px;
 	width: 100%;
 	padding: 7px;
+	font-family: $mainSansSerif;
+	font-size: 16px;
 }
