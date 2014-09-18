@@ -67,6 +67,8 @@ ul {
 
 ul.users {
   /*margin-bottom: 20px;*/ }
+  ul.users li {
+    font-weight: bold; }
 
 .block-btn {
   display: block;
@@ -280,6 +282,8 @@ div.login-form-container {
     color: white;
     border: 1px solid black;
     /*border-radius: 7px;*/ }
+  .register-form-container h2 {
+    color: #8f5503; }
 
 .users-container {
   border-top-left-radius: 12px;
